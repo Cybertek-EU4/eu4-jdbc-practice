@@ -16,25 +16,25 @@ public class Main {
         //run query and get the result in resultset object
         ResultSet resultSet = statement.executeQuery("select * from departments");
 
-//        //move pointer to first row
-//        resultSet.next();
-//
-//        //getting information with column name
-//        System.out.println(resultSet.getString("region_name"));
-//        //getting information with column index (starts from 1)
-//        System.out.println(resultSet.getString(2));
-//
-//        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
-//
-//        //move pointer to second row
-//        resultSet.next();
-//
-//        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
-//
-//        //move pointer to second row
-//        resultSet.next();
-//
-//        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
+        //move pointer to first row
+        resultSet.next();
+
+        //getting information with column name
+        System.out.println(resultSet.getString("region_name"));
+        //getting information with column index (starts from 1)
+        System.out.println(resultSet.getString(2));
+
+        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
+
+        //move pointer to second row
+        resultSet.next();
+
+        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
+
+        //move pointer to second row
+        resultSet.next();
+
+        System.out.println(resultSet.getInt(1)+" - "+resultSet.getString("region_name"));
 
         while(resultSet.next()){
             System.out.println(resultSet.getString(1)+" - "+resultSet.getString(2) +" - "+resultSet.getString(3) +" - "+ resultSet.getString(4));

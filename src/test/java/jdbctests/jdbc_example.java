@@ -92,9 +92,11 @@ public class jdbc_example {
         System.out.println(colCount);
 
         //column names
-//        System.out.println(rsMetadata.getColumnName(1));
-//        System.out.println(rsMetadata.getColumnName(2));
+        System.out.println(rsMetadata.getColumnName(1));
+        System.out.println(rsMetadata.getColumnName(2));
 
+        //rsMetadata.getColumnName(1); --> Column Name
+        //resultSet.getString(1); --> column value
         //print all the column names dynamically
         for (int i = 1; i <= colCount; i++) {
             System.out.println(rsMetadata.getColumnName(i));
