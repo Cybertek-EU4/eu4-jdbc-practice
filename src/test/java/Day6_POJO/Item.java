@@ -1,10 +1,9 @@
 
 package Day6_POJO;
 
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class Item {
 
@@ -20,13 +19,13 @@ public class Item {
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Item() {
     }
 
     /**
-     * 
+     *
      * @param regionId
      * @param regionName
      * @param links

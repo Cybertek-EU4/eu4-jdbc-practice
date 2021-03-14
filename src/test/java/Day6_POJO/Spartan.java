@@ -40,6 +40,7 @@ public class Spartan {
         this.name = name;
     }
 
+
     public String getGender() {
         return gender;
     }

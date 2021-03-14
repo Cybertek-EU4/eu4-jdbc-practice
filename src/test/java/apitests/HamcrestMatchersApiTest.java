@@ -23,9 +23,9 @@ public class HamcrestMatchersApiTest {
     public void OneSpartanWithHamcrest(){
         given().accept(ContentType.JSON)
                 .and().pathParam("id",15).
-        when().get("http://3.80.189.73:8000/api/spartans/{id}")
+        when().get("http://34.228.41.120:8000/api/spartans/{id}")
                 .then().statusCode(200)
-                .and().assertThat().contentType(equalTo("application/json;charset=UTF-8"))
+                .and().assertThat().contentType(equalTo("application/json"))
                 .and().assertThat().body("id",equalTo(15),
                 "name",equalTo("Meta"),
                                         "gender",equalTo("Female"),
@@ -39,11 +39,13 @@ public class HamcrestMatchersApiTest {
         given().accept(ContentType.JSON)
                 .and().pathParam("id",8261)
         .when().log().all().get("http://api.cybertektraining.com/teacher/{id}")
-                .then().assertThat().statusCode(200)
+                .then().statusCode(200)
                 .and().contentType(equalTo("application/json;charset=UTF-8"))
                 .and().header("Content-Length",equalTo("240"))
                 .and().header("Connection",equalTo("Keep-Alive"))
                 .and().header("Date",notNullValue())
+                .and().headers("Content-Length",equalTo("240"),
+                "Connection",equalTo("Keep-Alive"))
                 .and().assertThat().body("teachers.firstName[0]",equalTo("James"),
                         "teachers.lastName[0]",equalTo("Bond"),
                                                 "teachers.gender[0]",equalTo("Male"))
